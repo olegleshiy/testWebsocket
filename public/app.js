@@ -36,7 +36,7 @@ setInterval(() => {
         .then((data) => {
             document.querySelector('.city-name').textContent = data.name;
             document.querySelector('.temp').innerHTML = Math.round(data.main.temp - 273) + '&deg;';
-            document.querySelector('.disclaimer').textContent = data.weather[0]['description'];
+            document.querySelector('.disclaimer').textContent = new Date().toLocaleDateString();
             document.querySelector('.features li').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`
         })
         .then(() => {

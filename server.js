@@ -14,7 +14,7 @@ server.on('connection', ws => {
         }
 
     });
-    ws.send('Добро пожаловать');
+    ws.send('Welcome');
     ws.on('close', (reasonCode, description) => {
         console.log('Disconnected ' + ws.remoteAddress);
         console.dir({ reasonCode, description });
